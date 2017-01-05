@@ -1,8 +1,8 @@
-package search;
+package search.windows;
 
-import Windows.Add;
-import Windows.About;
-import Windows.Details;
+import search.windows.Add;
+import search.windows.About;
+import search.windows.Details;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

@@ -1,6 +1,4 @@
-package Windows;
-
-import search.MainGUI;
+package search.windows;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

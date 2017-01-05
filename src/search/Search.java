@@ -1,6 +1,7 @@
 
 package search;
 
+import search.windows.MainGUI;
 import java.awt.Frame;
 
 /**
