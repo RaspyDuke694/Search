@@ -43,6 +43,8 @@ public class Add extends javax.swing.JFrame {
         AddSep = new javax.swing.JSeparator();
         SaveButton = new javax.swing.JButton();
         CancelButton = new javax.swing.JButton();
+        EnrollLabel = new javax.swing.JLabel();
+        EnrollField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +80,8 @@ public class Add extends javax.swing.JFrame {
             }
         });
 
+        EnrollLabel.setText("Enrollment");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -85,6 +89,16 @@ public class Add extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(AddressLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AddressPanel))
+                    .addComponent(AddSep)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(SaveButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CancelButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -106,24 +120,18 @@ public class Add extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(EmailLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(AddressLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AddressPanel))
-                    .addComponent(AddSep)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(SaveButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CancelButton)))
+                                .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(EnrollLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(EnrollField, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {AddressLabel, DeptLabel, EmailLabel, NameLabel, PhoneLabel, SpecialLabel});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {AddressLabel, DeptLabel, EmailLabel, EnrollLabel, NameLabel, PhoneLabel, SpecialLabel});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {DeptField, EmailField, NameField, PhoneField, SpecialField});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {DeptField, EmailField, EnrollField, NameField, PhoneField, SpecialField});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CancelButton, SaveButton});
 
@@ -131,6 +139,10 @@ public class Add extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EnrollLabel)
+                    .addComponent(EnrollField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NameLabel)
                     .addComponent(NameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -153,19 +165,19 @@ public class Add extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(AddressLabel)
-                    .addComponent(AddressPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AddressPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(AddSep, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveButton)
                     .addComponent(CancelButton))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AddressLabel, DeptLabel, EmailLabel, NameLabel, PhoneLabel, SpecialLabel});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AddressLabel, DeptLabel, EmailLabel, EnrollLabel, NameLabel, PhoneLabel, SpecialLabel});
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {DeptField, EmailField, NameField, PhoneField, SpecialField});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {DeptField, EmailField, EnrollField, NameField, PhoneField, SpecialField});
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {CancelButton, SaveButton});
 
@@ -177,7 +189,21 @@ public class Add extends javax.swing.JFrame {
     }//GEN-LAST:event_CancelButtonActionPerformed
 
     private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
-        // TODO add your handling code here:
+        
+        /*String enroll=EnrollField.getText();
+        String name = NameField.getText();
+        String dept= DeptField.getText();
+        String email= EmailField.getText();
+        String spec=SpecialField.getText();
+        String add=AddressField.getText();
+        int phone=Integer.parseInt(PhoneField.getText());
+        try{
+            insertRecord (enroll, name, dept, email, spec, add, phone);
+            throw IllegalStateException;
+        }catch(IllegalStateException e){
+            System.out.println("Something went wrong");
+        }
+        setVisible(false);*/
     }//GEN-LAST:event_SaveButtonActionPerformed
 
     /**
@@ -219,6 +245,8 @@ public class Add extends javax.swing.JFrame {
     private javax.swing.JLabel DeptLabel;
     private javax.swing.JTextField EmailField;
     private javax.swing.JLabel EmailLabel;
+    private javax.swing.JTextField EnrollField;
+    private javax.swing.JLabel EnrollLabel;
     private javax.swing.JTextField NameField;
     private javax.swing.JLabel NameLabel;
     private javax.swing.JTextField PhoneField;

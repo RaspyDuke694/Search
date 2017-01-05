@@ -1,9 +1,5 @@
 package search.windows;
 
-import search.windows.Add;
-import search.windows.About;
-import search.windows.Details;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
