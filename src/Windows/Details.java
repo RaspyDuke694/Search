@@ -1,4 +1,6 @@
-package search;
+package Windows;
+
+import search.MainGUI;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,7 +21,7 @@ public class Details extends javax.swing.JPanel {
         initComponents();
     }
 
-    Details(MainGUI aThis, boolean b) {
+    public Details(MainGUI aThis, boolean b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
