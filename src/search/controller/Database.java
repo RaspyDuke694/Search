@@ -19,5 +19,5 @@ public class Database {
             Statement stmt = con.createStatement();
             ResultSet rs=stmt.executeQuery("INSERT INTO `sql6152400`.`Search` (`Enrollment`, `Name`, `Department`, `Speciality`, `Phone`, `Email`, `Address`) VALUES (enroll, name, dept, spec, phone, email, phone);");
         }
-        }
+    }
 }
