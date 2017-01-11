@@ -1,5 +1,7 @@
 package search.windows;
 
+import search.controller.About;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -191,7 +193,7 @@ public class MainGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Add s=new Add();
+        Authentication s=new Authentication();
         s.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 

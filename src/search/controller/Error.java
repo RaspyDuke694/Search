@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package search.windows;
+package search.controller;
 
 /**
  *
- * @author Vishal
+ * @author Vimal
  */
-public class About extends javax.swing.JDialog {
+public class Error extends javax.swing.JDialog {
 
     /**
-     * Creates new form About
+     * Creates new form Error
      * @param parent
      * @param modal
      */
-    public About(java.awt.Frame parent, boolean modal) {
+    public Error(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -30,35 +30,22 @@ public class About extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        AboutPanel = new javax.swing.JScrollPane();
-        AboutText = new javax.swing.JTextArea();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("About");
+        setTitle("Error");
 
-        AboutText.setEditable(false);
-        AboutText.setColumns(20);
-        AboutText.setLineWrap(true);
-        AboutText.setRows(5);
-        AboutText.setText("This Project was created for Winter Training Project by RaspyDuke694.\nVisit github.com/raspyduke694 for more.");
-        AboutText.setToolTipText("");
-        AboutText.setWrapStyleWord(true);
-        AboutText.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        AboutText.setCaretColor(new java.awt.Color(0, 0, 3));
-        AboutText.setFocusable(false);
-        AboutPanel.setViewportView(AboutText);
+        jTextField1.setText("Something is really wrong here :(");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(AboutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AboutPanel)
+            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -80,16 +67,20 @@ public class About extends javax.swing.JDialog {
                     break;
                 }
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(About.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Error.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Error.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Error.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Error.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(() -> {
-            About dialog = new About(new javax.swing.JFrame(), true);
+            Error dialog = new Error(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {
@@ -101,7 +92,6 @@ public class About extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane AboutPanel;
-    private javax.swing.JTextArea AboutText;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

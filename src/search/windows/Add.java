@@ -45,6 +45,7 @@ public class Add extends javax.swing.JFrame {
         CancelButton = new javax.swing.JButton();
         EnrollLabel = new javax.swing.JLabel();
         EnrollField = new javax.swing.JTextField();
+        AddMoreButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,6 +83,13 @@ public class Add extends javax.swing.JFrame {
 
         EnrollLabel.setText("Enrollment");
 
+        AddMoreButton.setText("Add more");
+        AddMoreButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddMoreButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -96,6 +104,8 @@ public class Add extends javax.swing.JFrame {
                     .addComponent(AddSep)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(AddMoreButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SaveButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(CancelButton))
@@ -133,7 +143,7 @@ public class Add extends javax.swing.JFrame {
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {DeptField, EmailField, EnrollField, NameField, PhoneField, SpecialField});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CancelButton, SaveButton});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {AddMoreButton, CancelButton, SaveButton});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,7 +181,8 @@ public class Add extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveButton)
-                    .addComponent(CancelButton))
+                    .addComponent(CancelButton)
+                    .addComponent(AddMoreButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -179,13 +190,13 @@ public class Add extends javax.swing.JFrame {
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {DeptField, EmailField, EnrollField, NameField, PhoneField, SpecialField});
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {CancelButton, SaveButton});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AddMoreButton, CancelButton, SaveButton});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelButtonActionPerformed
-        setVisible(false);
+        dispose();
     }//GEN-LAST:event_CancelButtonActionPerformed
 
     private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
@@ -202,9 +213,17 @@ public class Add extends javax.swing.JFrame {
             throw IllegalStateException;
         }catch(IllegalStateException e){
             System.out.println("Something went wrong");
-        }
-        setVisible(false);*/
+        }*/
+        dispose();
     }//GEN-LAST:event_SaveButtonActionPerformed
+
+    private void AddMoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddMoreButtonActionPerformed
+        // TODO add your handling code here:
+        Add s= new Add();
+        dispose();
+        s.setVisible(true);
+        
+    }//GEN-LAST:event_AddMoreButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,6 +255,7 @@ public class Add extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddMoreButton;
     private javax.swing.JSeparator AddSep;
     private javax.swing.JTextArea AddressField;
     private javax.swing.JLabel AddressLabel;
