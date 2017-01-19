@@ -5,6 +5,11 @@
  */
 package search.windows;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  *
  * @author Vishal
@@ -201,7 +206,7 @@ public class Add extends javax.swing.JFrame {
 
     private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
         
-        /*String enroll=EnrollField.getText();
+        String enroll=EnrollField.getText();
         String name = NameField.getText();
         String dept= DeptField.getText();
         String email= EmailField.getText();
@@ -209,11 +214,15 @@ public class Add extends javax.swing.JFrame {
         String add=AddressField.getText();
         int phone=Integer.parseInt(PhoneField.getText());
         try{
-            insertRecord (enroll, name, dept, email, spec, add, phone);
-            throw IllegalStateException;
-        }catch(IllegalStateException e){
-            System.out.println("Something went wrong");
-        }*/
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor");
+            Statement st = con.createStatement();
+            String query = "insert into search values(" + enroll + ", \"" + name + "\",\"" + dept + "\",\"" + spec + "\",\"" + phone+ "\",\""+ email +"\",\"" + add + "\",\"YES\")";
+            st.executeUpdate(query);
+            con.close();
+        }catch(SQLException e){
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }
         dispose();
     }//GEN-LAST:event_SaveButtonActionPerformed
 

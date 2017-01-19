@@ -29,6 +29,7 @@ public class MainGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         SearchField = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
@@ -54,6 +55,11 @@ public class MainGUI extends javax.swing.JFrame {
 
         SearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/search_src.gif"))); // NOI18N
         SearchButton.setText("Search");
+        SearchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchButtonActionPerformed(evt);
+            }
+        });
 
         IndexCheck.setText("Index");
 
@@ -65,14 +71,10 @@ public class MainGUI extends javax.swing.JFrame {
 
         AlumniCheck.setText("Alumni");
 
-        ListTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
+        org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${}");
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, new java.util.List(), eLProperty, ListTable);
+        bindingGroup.addBinding(jTableBinding);
+        jTableBinding.bind();
         ListTablePanel.setViewportView(ListTable);
 
         Status.setBorder(null);
@@ -179,6 +181,8 @@ public class MainGUI extends javax.swing.JFrame {
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AlumniCheck, DeptCheck, IndexCheck, NameCheck, SpecialCheck});
 
+        bindingGroup.bind();
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -200,6 +204,11 @@ public class MainGUI extends javax.swing.JFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_SearchButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,6 +259,7 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
 private void addButtonActionPerformed (
@@ -257,4 +267,6 @@ java.awt.event.ActionEvent evt) {
     Details d = new Details(this, true);
     d.setVisible(true);
     }
+
 }
+
