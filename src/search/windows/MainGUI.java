@@ -56,6 +56,9 @@ public class MainGUI extends javax.swing.JFrame {
             if(flag==1) query = query +" or enrollment = \""+text+"\"";
             else {query = query +"enrollment = \"" + text + "\"" ;flag=1;}
         }
+        if(flag==0){
+            query=" ";
+        }
         return query;
     }
     
@@ -247,7 +250,8 @@ public class MainGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
+        AuthenticationDelete s = new AuthenticationDelete();
+        s.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
