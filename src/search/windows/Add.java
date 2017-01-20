@@ -9,6 +9,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static search.controller.Database.insertRecord;
 
 /**
  *
@@ -213,15 +216,10 @@ public class Add extends javax.swing.JFrame {
         String spec=SpecialField.getText();
         String add=AddressField.getText();
         int phone=Integer.parseInt(PhoneField.getText());
-        try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor");
-            Statement st = con.createStatement();
-            String query = "insert into search values(" + enroll + ", \"" + name + "\",\"" + dept + "\",\"" + spec + "\",\"" + phone+ "\",\""+ email +"\",\"" + add + "\",\"YES\")";
-            st.executeUpdate(query);
-            con.close();
-        }catch(SQLException e){
-            System.err.println("Got an exception!");
-            System.err.println(e.getMessage());
+        try {
+            insertRecord (enroll, name, dept, email, spec, add, phone);
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Add.class.getName()).log(Level.SEVERE, null, ex);
         }
         dispose();
     }//GEN-LAST:event_SaveButtonActionPerformed

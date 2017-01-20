@@ -100,15 +100,15 @@
                       <Component id="SearchButton" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="IndexCheck" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="ValueLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="EnrollCheck" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="NameCheck" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="DeptCheck" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="SpecialCheck" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AlumniCheck" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Component id="TablePane" alignment="0" pref="688" max="32767" attributes="0"/>
@@ -127,11 +127,11 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="IndexCheck" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="EnrollCheck" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="NameCheck" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="DeptCheck" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="SpecialCheck" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="AlumniCheck" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ValueLabel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="MainGUISeperator" min="-2" pref="10" max="-2" attributes="0"/>
@@ -156,29 +156,28 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SearchButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="IndexCheck">
+    <Component class="javax.swing.JCheckBox" name="EnrollCheck">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Index"/>
+        <Property name="selected" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="Enrollment"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="NameCheck">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="DeptCheck">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Department"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="SpecialCheck">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Speciality"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="AlumniCheck">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alumni"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSeparator" name="MainGUISeperator">
@@ -205,5 +204,10 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="ValueLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Values to search:"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

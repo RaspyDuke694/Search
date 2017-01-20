@@ -30,12 +30,36 @@ public class MainGUI extends javax.swing.JFrame {
     public MainGUI() throws SQLException {
         this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor");
         initComponents();
-        UpdateTable();
+        
+    }
+    
+    @SuppressWarnings("UnusedAssignment")
+    private String query(){
+        String query = "select * from search where ";
+        String text= SearchField.getText();
+        int flag=0;
+        if(NameCheck.isSelected()==true){
+            query = query + "name like \"%"+ text+ "%\"";
+            flag=1;
+        }
+        if(DeptCheck.isSelected()==true){
+            if(flag==1) query = query + " or department like \"%"+text+"%\"";
+            else {query = query + "department like \"%"+ text+ "%\"";flag=1;}
+        }
+        if(SpecialCheck.isSelected()==true){
+            if(flag==1) query = query +" or speciality like \"%"+text+"%\"";
+            else {query = query +"speciality like \"%"+ text+ "%\"";flag=1;}
+        }
+        if(EnrollCheck.isSelected()==true) {
+            if(flag==1) query = query +" or enrollment = \""+text+"\"";
+            else {query = query +"enrollment = \"" + text + "\"" ;flag=1;}
+        }
+        return query;
     }
     
     private void UpdateTable(){
         try{
-            String query="select * from search";
+            String query = query();
             pst=con.prepareStatement(query);
             rs=pst.executeQuery();
             ResultTable.setModel(DbUtils.resultSetToTableModel(rs));
@@ -56,14 +80,14 @@ public class MainGUI extends javax.swing.JFrame {
 
         SearchField = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
-        IndexCheck = new javax.swing.JCheckBox();
+        EnrollCheck = new javax.swing.JCheckBox();
         NameCheck = new javax.swing.JCheckBox();
         DeptCheck = new javax.swing.JCheckBox();
         SpecialCheck = new javax.swing.JCheckBox();
-        AlumniCheck = new javax.swing.JCheckBox();
         MainGUISeperator = new javax.swing.JSeparator();
         TablePane = new javax.swing.JScrollPane();
         ResultTable = new javax.swing.JTable();
+        ValueLabel = new javax.swing.JLabel();
         MainGUIMenu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -83,15 +107,17 @@ public class MainGUI extends javax.swing.JFrame {
             }
         });
 
-        IndexCheck.setText("Index");
+        EnrollCheck.setSelected(true);
+        EnrollCheck.setText("Enrollment");
 
+        NameCheck.setSelected(true);
         NameCheck.setText("Name");
 
+        DeptCheck.setSelected(true);
         DeptCheck.setText("Department");
 
+        SpecialCheck.setSelected(true);
         SpecialCheck.setText("Speciality");
-
-        AlumniCheck.setText("Alumni");
 
         ResultTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -102,6 +128,8 @@ public class MainGUI extends javax.swing.JFrame {
             }
         ));
         TablePane.setViewportView(ResultTable);
+
+        ValueLabel.setText("Values to search:");
 
         jMenu1.setText("File");
 
@@ -163,21 +191,21 @@ public class MainGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SearchButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(IndexCheck)
+                        .addComponent(ValueLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(EnrollCheck)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(NameCheck)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(DeptCheck)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SpecialCheck)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AlumniCheck)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(TablePane, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {AlumniCheck, DeptCheck, IndexCheck, NameCheck, SpecialCheck});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {DeptCheck, EnrollCheck, NameCheck, SpecialCheck});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,11 +216,11 @@ public class MainGUI extends javax.swing.JFrame {
                     .addComponent(SearchButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(IndexCheck)
+                    .addComponent(EnrollCheck)
                     .addComponent(NameCheck)
                     .addComponent(DeptCheck)
                     .addComponent(SpecialCheck)
-                    .addComponent(AlumniCheck))
+                    .addComponent(ValueLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MainGUISeperator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -200,7 +228,7 @@ public class MainGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AlumniCheck, DeptCheck, IndexCheck, NameCheck, SpecialCheck});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {DeptCheck, EnrollCheck, NameCheck, SpecialCheck});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -225,7 +253,7 @@ public class MainGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
-        
+        UpdateTable();
         
     }//GEN-LAST:event_SearchButtonActionPerformed
 
@@ -263,9 +291,8 @@ public class MainGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox AlumniCheck;
     private javax.swing.JCheckBox DeptCheck;
-    private javax.swing.JCheckBox IndexCheck;
+    private javax.swing.JCheckBox EnrollCheck;
     private javax.swing.JMenuBar MainGUIMenu;
     private javax.swing.JSeparator MainGUISeperator;
     private javax.swing.JCheckBox NameCheck;
@@ -274,6 +301,7 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JTextField SearchField;
     private javax.swing.JCheckBox SpecialCheck;
     private javax.swing.JScrollPane TablePane;
+    private javax.swing.JLabel ValueLabel;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jMenuItem1;

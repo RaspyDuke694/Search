@@ -5,6 +5,8 @@
  */
 package search.controller;
 import java.sql.*;
+import javax.swing.JOptionPane;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -14,10 +16,14 @@ import java.sql.*;
 public class Database {
     public static void insertRecord (String enroll, String name, String dept, String email, String spec, String add, int phone) throws ClassNotFoundException, SQLException{
         
-            Class.forName("com.mysql.jdbc.Driver");
-            try (Connection con = DriverManager.getConnection("jdbc:mysql://sql6.freesqldatabase.com:3306/sql6152400","sql6152400","qEJpCrwHCQ")) { 
-            Statement stmt = con.createStatement();
-            ResultSet rs=stmt.executeQuery("INSERT INTO `sql6152400`.`Search` (`Enrollment`, `Name`, `Department`, `Speciality`, `Phone`, `Email`, `Address`) VALUES (enroll, name, dept, spec, phone, email, phone);");
-        }
-    }
+            try{
+                try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor")) {
+                    Statement st = con.createStatement();
+                    String query = "insert into search values(" + enroll + ", \"" + name + "\",\"" + dept + "\",\"" + spec + "\",\"" + phone+ "\",\""+ email +"\",\"" + add + "\",\"YES\")";
+                    st.executeUpdate(query);
+                }
+        }catch(SQLException e){
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }}
 }
