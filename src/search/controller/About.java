@@ -38,6 +38,7 @@ public class About extends javax.swing.JDialog {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("About");
 
         jLabel1.setText("This Project was created as part of");
 

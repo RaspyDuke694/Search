@@ -42,6 +42,7 @@ public class AuthenticationDelete extends javax.swing.JFrame {
         PswdField = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Authentication");
 
         AuthLabel.setText("Please enter your Username and Password to proceed.");
         AuthLabel.setAutoscrolls(true);

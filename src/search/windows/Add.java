@@ -56,6 +56,7 @@ public class Add extends javax.swing.JFrame {
         AddMoreButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Add Record");
 
         NameLabel.setText("Name");
 

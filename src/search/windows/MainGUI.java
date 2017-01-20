@@ -103,6 +103,7 @@ public class MainGUI extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Database Search");
 
         SearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/search_src.gif"))); // NOI18N
         SearchButton.setText("Search");

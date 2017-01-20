@@ -35,6 +35,7 @@ public class AuthFailDialog extends javax.swing.JDialog {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("AuthFail");
 
         jLabel1.setText("Invalid Username/Password combination.");
 
