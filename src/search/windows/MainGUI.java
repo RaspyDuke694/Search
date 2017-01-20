@@ -1,11 +1,13 @@
 package search.windows;
 
+import search.controller.AuthenticationAdd;
 import search.controller.About;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 import net.proteanit.sql.DbUtils;
+import search.controller.AuthenticationDelete;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -132,6 +134,11 @@ public class MainGUI extends javax.swing.JFrame {
         ValueLabel.setText("Values to search:");
 
         jMenu1.setText("File");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add_obj.gif"))); // NOI18N
         jMenuItem1.setText("Add Record");
@@ -244,7 +251,7 @@ public class MainGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Authentication s=new Authentication();
+        AuthenticationAdd s=new AuthenticationAdd();
         s.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -256,6 +263,11 @@ public class MainGUI extends javax.swing.JFrame {
         UpdateTable();
         
     }//GEN-LAST:event_SearchButtonActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        AuthenticationDelete s= new AuthenticationDelete();
+        s.setVisible(true);
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
      * @param args the command line arguments

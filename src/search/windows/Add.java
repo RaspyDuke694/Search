@@ -206,9 +206,8 @@ public class Add extends javax.swing.JFrame {
     private void CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelButtonActionPerformed
         dispose();
     }//GEN-LAST:event_CancelButtonActionPerformed
-
-    private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
-        
+    
+    private void Record(){
         String enroll=EnrollField.getText();
         String name = NameField.getText();
         String dept= DeptField.getText();
@@ -221,15 +220,18 @@ public class Add extends javax.swing.JFrame {
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Add.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
+        Record();
         dispose();
     }//GEN-LAST:event_SaveButtonActionPerformed
 
     private void AddMoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddMoreButtonActionPerformed
-        // TODO add your handling code here:
+        Record();
         Add s= new Add();
         dispose();
-        s.setVisible(true);
-        
+        s.setVisible(true);   
     }//GEN-LAST:event_AddMoreButtonActionPerformed
 
     /**

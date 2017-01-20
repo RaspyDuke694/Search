@@ -3,22 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package search.windows;
+package search.controller;
 
 import javax.swing.JDialog;
 import search.controller.AuthFailDialog;
 import search.windows.Add;
+import search.windows.Add;
+import search.windows.Delete;
 
 /**
  *
  * @author Vimal
  */
-public class Authentication extends javax.swing.JFrame {
+public class AuthenticationDelete extends javax.swing.JFrame {
 
     /**
      * Creates new form Authentication
      */
-    public Authentication() {
+    public AuthenticationDelete() {
         initComponents();
     }
 
@@ -140,7 +142,7 @@ public class Authentication extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(UserField.getText().equals("root") && PswdField.getText().equals("toor")){
             setVisible(false);
-            Add s=new Add();
+            Delete s=new Delete();
             s.setVisible(true);}
         else{
             AuthFailDialog d = new AuthFailDialog(this, true);
@@ -165,20 +167,23 @@ public class Authentication extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AuthenticationDelete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AuthenticationDelete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AuthenticationDelete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AuthenticationDelete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Authentication().setVisible(true);
+                new AuthenticationDelete().setVisible(true);
             }
         });
     }
