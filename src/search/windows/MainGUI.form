@@ -15,7 +15,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icons/add_obj.gif"/>
+                  <Image iconType="3" name="/icons/add-interface-circular-symbol-with-plus-sign.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add Record"/>
               </Properties>
@@ -26,7 +26,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icons/delete_edit.gif"/>
+                  <Image iconType="3" name="/icons/rubbish-bin.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Delete Record"/>
               </Properties>
@@ -39,7 +39,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icons/warning.gif"/>
+                  <Image iconType="3" name="/icons/open-exit-door.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Exit"/>
               </Properties>
@@ -57,7 +57,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icons/info_tsk.gif"/>
+                  <Image iconType="3" name="/icons/info-button.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="About"/>
               </Properties>
@@ -152,7 +152,7 @@
     <Component class="javax.swing.JButton" name="SearchButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icons/search_src.gif"/>
+          <Image iconType="3" name="/icons/musica-searcher.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Search"/>
       </Properties>

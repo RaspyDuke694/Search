@@ -51,7 +51,7 @@ public class AuthenticationDelete extends javax.swing.JFrame {
 
         authPswdLabel.setText("Password:");
 
-        CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/progress_rem.gif"))); // NOI18N
+        CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/close.png"))); // NOI18N
         CancelButton.setText("Cancel");
         CancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +59,7 @@ public class AuthenticationDelete extends javax.swing.JFrame {
             }
         });
 
+        AuthButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/circle-with-check-symbol.png"))); // NOI18N
         AuthButton.setText("Authenticate");
         AuthButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +116,7 @@ public class AuthenticationDelete extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(authPswdLabel)
                     .addComponent(PswdField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

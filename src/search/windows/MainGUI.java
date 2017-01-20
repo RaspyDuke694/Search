@@ -105,7 +105,7 @@ public class MainGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Database Search");
 
-        SearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/search_src.gif"))); // NOI18N
+        SearchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/musica-searcher.png"))); // NOI18N
         SearchButton.setText("Search");
         SearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +144,7 @@ public class MainGUI extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add_obj.gif"))); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add-interface-circular-symbol-with-plus-sign.png"))); // NOI18N
         jMenuItem1.setText("Add Record");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,7 +153,7 @@ public class MainGUI extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/delete_edit.gif"))); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/rubbish-bin.png"))); // NOI18N
         jMenuItem2.setText("Delete Record");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +163,7 @@ public class MainGUI extends javax.swing.JFrame {
         jMenu1.add(jMenuItem2);
         jMenu1.add(jSeparator1);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/warning.gif"))); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/open-exit-door.png"))); // NOI18N
         jMenuItem3.setText("Exit");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,7 +176,7 @@ public class MainGUI extends javax.swing.JFrame {
 
         jMenu2.setText("Help");
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/info_tsk.gif"))); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/info-button.png"))); // NOI18N
         jMenuItem4.setText("About");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

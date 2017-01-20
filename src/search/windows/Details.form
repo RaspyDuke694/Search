@@ -165,7 +165,7 @@
     <Component class="javax.swing.JButton" name="CloseButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icons/progress_rem.gif"/>
+          <Image iconType="3" name="/icons/close.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Close"/>
       </Properties>

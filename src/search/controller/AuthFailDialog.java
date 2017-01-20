@@ -41,6 +41,7 @@ public class AuthFailDialog extends javax.swing.JDialog {
 
         jLabel2.setText("Check and try again.");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/reload-arrow.png"))); // NOI18N
         jButton1.setText("Retry");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

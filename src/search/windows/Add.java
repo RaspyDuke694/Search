@@ -74,7 +74,7 @@ public class Add extends javax.swing.JFrame {
         AddressField.setRows(5);
         AddressPanel.setViewportView(AddressField);
 
-        SaveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save_edit.gif"))); // NOI18N
+        SaveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save-file-diskette.png"))); // NOI18N
         SaveButton.setText("Save");
         SaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +82,7 @@ public class Add extends javax.swing.JFrame {
             }
         });
 
-        CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/progress_rem.gif"))); // NOI18N
+        CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/close.png"))); // NOI18N
         CancelButton.setText("Cancel");
         CancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +92,7 @@ public class Add extends javax.swing.JFrame {
 
         EnrollLabel.setText("Enrollment");
 
+        AddMoreButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/add-interface-circular-symbol-with-plus-sign.png"))); // NOI18N
         AddMoreButton.setText("Add more");
         AddMoreButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

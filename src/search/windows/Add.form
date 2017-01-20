@@ -193,7 +193,7 @@
     <Component class="javax.swing.JButton" name="SaveButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icons/save_edit.gif"/>
+          <Image iconType="3" name="/icons/save-file-diskette.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Save"/>
       </Properties>
@@ -204,7 +204,7 @@
     <Component class="javax.swing.JButton" name="CancelButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icons/progress_rem.gif"/>
+          <Image iconType="3" name="/icons/close.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancel"/>
       </Properties>
@@ -221,6 +221,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="AddMoreButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/add-interface-circular-symbol-with-plus-sign.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add more"/>
       </Properties>
       <Events>

@@ -67,7 +67,7 @@ public class Details extends javax.swing.JPanel {
             }
         });
 
-        CloseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/progress_rem.gif"))); // NOI18N
+        CloseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/close.png"))); // NOI18N
         CloseButton.setText("Close");
         CloseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

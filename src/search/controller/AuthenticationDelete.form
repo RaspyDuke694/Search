@@ -77,7 +77,7 @@
                   <Component id="authPswdLabel" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="PswdField" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="103" max="32767" attributes="0"/>
+              <EmptySpace pref="101" max="32767" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -113,7 +113,7 @@
     <Component class="javax.swing.JButton" name="CancelButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/icons/progress_rem.gif"/>
+          <Image iconType="3" name="/icons/close.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancel"/>
       </Properties>
@@ -123,6 +123,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="AuthButton">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/circle-with-check-symbol.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Authenticate"/>
       </Properties>
       <Events>
