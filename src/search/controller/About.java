@@ -48,7 +48,7 @@ public class About extends javax.swing.JDialog {
 
         jLabel4.setText("https://github.com/RaspyDuke694");
 
-        jLabel5.setText("for more projects");
+        jLabel5.setText("for more projects.");
 
         jButton1.setText("Close");
         jButton1.setAlignmentY(0.0F);
