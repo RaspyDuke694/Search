@@ -51,6 +51,7 @@ public class About extends javax.swing.JDialog {
         jLabel5.setText("for more projects");
 
         jButton1.setText("Close");
+        jButton1.setAlignmentY(0.0F);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
