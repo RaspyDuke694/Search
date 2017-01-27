@@ -14,13 +14,15 @@ import search.windows.Delete;
  *
  * @author Vimal
  */
-public class AuthenticationDelete extends javax.swing.JFrame {
-
+public class Authentication extends javax.swing.JFrame {
+    int window;
     /**
      * Creates new form Authentication
+     * @param w
      */
-    public AuthenticationDelete() {
+    public Authentication(int w) {
         initComponents();
+        window=w;
     }
 
     /**
@@ -144,11 +146,24 @@ public class AuthenticationDelete extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(UserField.getText().equals("root") && PswdField.getText().equals("toor")){
             setVisible(false);
-            Delete s=new Delete();
-            s.setVisible(true);}
-        else{
-            AuthFailDialog d = new AuthFailDialog(this, true);
-            d.setVisible(true);
+            switch (window) {
+                case 1:
+                    {
+                        Delete s=new Delete();
+                        s.setVisible(true);
+                        break;
+                    }
+                case 0:
+                    {
+                        Add s=new Add();
+                        s.setVisible(true);
+                        break;
+                    }
+                default:
+                    AuthFailDialog d = new AuthFailDialog(this, true);
+                    d.setVisible(true);
+                    break;
+            }
         }
     }//GEN-LAST:event_AuthButtonActionPerformed
 
@@ -168,24 +183,31 @@ public class AuthenticationDelete extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AuthenticationDelete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AuthenticationDelete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AuthenticationDelete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AuthenticationDelete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Authentication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new AuthenticationDelete().setVisible(true);
-        });
+        /*java.awt.EventQueue.invokeLater(() -> {
+            new Authentication().setVisible(true);
+        });*/
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

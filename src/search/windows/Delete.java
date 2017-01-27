@@ -8,17 +8,21 @@ package search.windows;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
  * @author Vimal
  */
 public class Delete extends javax.swing.JFrame {
-
+    
+    String name,dept,email,phone,spec,add;
     /**
      * Creates new form Delete
      */
+    
     public Delete() {
         initComponents();
     }
@@ -32,13 +36,16 @@ public class Delete extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         SearchField = new javax.swing.JTextField();
         DeleteButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         CancelButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel2.setText("jLabel2");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Delete Record");
 
         jLabel1.setText("Enrollment No:");
@@ -66,16 +73,16 @@ public class Delete extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SearchField))
                     .addComponent(jSeparator1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 244, Short.MAX_VALUE)
                         .addComponent(DeleteButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CancelButton)))
+                        .addComponent(CancelButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(SearchField)))
                 .addContainerGap())
         );
 
@@ -92,8 +99,8 @@ public class Delete extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DeleteButton)
-                    .addComponent(CancelButton))
+                    .addComponent(CancelButton)
+                    .addComponent(DeleteButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -107,7 +114,7 @@ public class Delete extends javax.swing.JFrame {
         try
     {
             try ( // create the mysql database connection
-                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor")) {
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor")) {
                 String query = "delete from search where Enrollment = \"" + SearchField.getText()+ "\"";
                 PreparedStatement preparedStmt = con.prepareStatement(query);
                 
@@ -126,7 +133,26 @@ public class Delete extends javax.swing.JFrame {
     private void CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelButtonActionPerformed
         dispose();
     }//GEN-LAST:event_CancelButtonActionPerformed
-
+    
+    private String getname(){
+        return name;
+    }
+    private String getspec(){
+        return spec;
+    }
+    private String getdept(){
+        return dept;
+    }
+    private String getphone(){
+        return phone;
+    }
+    private String getemail(){
+        return email;
+    }
+    private String getadd(){
+        return add;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -165,6 +191,7 @@ public class Delete extends javax.swing.JFrame {
     private javax.swing.JButton DeleteButton;
     private javax.swing.JTextField SearchField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

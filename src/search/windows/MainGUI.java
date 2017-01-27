@@ -1,13 +1,14 @@
 package search.windows;
 
-import search.controller.AuthenticationAdd;
+
 import search.controller.About;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 import net.proteanit.sql.DbUtils;
-import search.controller.AuthenticationDelete;
+import search.controller.Authentication;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -252,12 +253,12 @@ public class MainGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        AuthenticationDelete s = new AuthenticationDelete();
+        Authentication s = new Authentication(1);
         s.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        AuthenticationAdd s=new AuthenticationAdd();
+        Authentication s = new Authentication(0);
         s.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -271,8 +272,8 @@ public class MainGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_SearchButtonActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-        AuthenticationDelete s= new AuthenticationDelete();
-        s.setVisible(true);
+        /*AuthenticationDelete s= new AuthenticationDelete();
+        s.setVisible(true);*/
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
@@ -329,11 +330,11 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 
-private void addButtonActionPerformed (
+/*private void addButtonActionPerformed (
 java.awt.event.ActionEvent evt) {
-    Details d = new Details(this, true);
+     d = new Details(this, true);
     d.setVisible(true);
-    }
+    }*/
 
 }
 

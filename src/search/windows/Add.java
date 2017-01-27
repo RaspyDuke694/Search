@@ -55,7 +55,7 @@ public class Add extends javax.swing.JFrame {
         EnrollField = new javax.swing.JTextField();
         AddMoreButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Add Record");
 
         NameLabel.setText("Name");
