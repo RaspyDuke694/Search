@@ -11,6 +11,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
+import static search.controller.Database.deleteRecord;
+import search.controller.DeleteConfirm;
 
 /**
  *
@@ -36,14 +39,11 @@ public class Delete extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         SearchField = new javax.swing.JTextField();
         DeleteButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         CancelButton = new javax.swing.JButton();
-
-        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Delete Record");
@@ -109,25 +109,14 @@ public class Delete extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
-        try
-    {
-            try ( // create the mysql database connection
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor")) {
-                String query = "delete from search where Enrollment = \"" + SearchField.getText()+ "\"";
-                PreparedStatement preparedStmt = con.prepareStatement(query);
-                
-                // execute the preparedstatement
-                preparedStmt.execute();
-            }
-          
-    }
-    catch (SQLException e)
-    {
-      System.err.println("Got an exception! ");
-      System.err.println(e.getMessage());
-    }
+        String enroll=SearchField.getText();
+        deleteRecord(enroll);
+        dispose();
+        //DeleteConfirm s= new DeleteConfirm(enroll);
+        //s.setVisible(true);
     }//GEN-LAST:event_DeleteButtonActionPerformed
 
     private void CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelButtonActionPerformed
@@ -191,7 +180,6 @@ public class Delete extends javax.swing.JFrame {
     private javax.swing.JButton DeleteButton;
     private javax.swing.JTextField SearchField;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

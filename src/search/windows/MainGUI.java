@@ -31,7 +31,8 @@ public class MainGUI extends javax.swing.JFrame {
      * @throws java.sql.SQLException
      */
     public MainGUI() throws SQLException {
-        this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor");
+        this.con = DriverManager.getConnection("jdbc:mysql://sql6.freesqldatabase.com:3306/sql6156171","sql6156171","iALIf9zVlZ");
+        //this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/search","root","toor");
         initComponents();
         
     }
